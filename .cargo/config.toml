@@ -1,0 +1,9 @@
+[build]
+target = "uefi-runtime-driver-debug.json"
+
+[unstable]
+build-std = ["core", "compiler_builtins", "alloc"]
+build-std-features = ["compiler-builtins-mem"]
+
+[target.uefi-runtime-driver-debug]
+runner = "./qemu.sh"

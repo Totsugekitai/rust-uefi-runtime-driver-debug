@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to QEMU",
+            "type": "gdb",
+            "request": "attach",
+            "target": "localhost:1234",
+            "remote": true,
+            "cwd": "${workspaceRoot}",
+            "gdbpath": "gdb",
+            "stopAtConnect": true,
+            "env": {
+                "PYTHONPATH": "${workspaceRoot}/.venv/lib/python3.12/site-packages"
+            },
+            "debugger_args": ["-n"],
+            "autorun": [
+                "source ./load-symbols.py",
+                "load-symbols $rip \"./target/uefi-runtime-driver-debug/debug/rust-uefi-runtime-driver-debug.efi\"",
+                "set GDB_ATTACHED = 1"
+            ]
+        }
+    ]
+}

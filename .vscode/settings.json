@@ -1,0 +1,6 @@
+{
+    "editor.formatOnSave": true,
+    "files.insertFinalNewline": true,
+    "rust-analyzer.cargo.allTargets": false,
+    "python.defaultInterpreterPath": ".venv/bin/python"
+}

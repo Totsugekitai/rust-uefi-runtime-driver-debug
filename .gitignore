@@ -1,0 +1,3 @@
+/target
+/.venv
+OVMF_VARS*.fd
